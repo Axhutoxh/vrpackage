@@ -30,4 +30,4 @@ const Avatar = (props) => {
 
 
 
-export  {Avatar};
+export default Avatar;
