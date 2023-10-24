@@ -1,0 +1,30 @@
+{
+  "name": "vrpackage",
+  "version": "0.0.13",
+  "description": "vite-react-framework",
+  "main": "src/index.ts",
+  "files": [
+    "src/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashutosh chandra",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.4",
+    "styled-components": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.28",
+    "@types/styled-components": "^5.1.28"
+  }
+}
+
