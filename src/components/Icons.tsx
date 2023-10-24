@@ -5,8 +5,7 @@ const Icon = (props)=>{
     const iconStyle = {
         ...props.style,
         color:props.color,
-        width:props.size,
-        height:props.size
+        fontSize:props.size,
     }
 
 
