@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./Icons";
 
 
 const Avatar = (props) => {
@@ -13,7 +14,7 @@ const Avatar = (props) => {
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: props?.color||'skyblue', 
-      backgroundImage: `url(${props.imgSrc})`,
+      backgroundImage: props['icon-outlined']||props['icon']||`url(${props.imgSrc})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
      ...props.style
@@ -21,8 +22,11 @@ const Avatar = (props) => {
 
   return (
     <div style={avatarStyle}>
-        {props.children}
-      {/* {imageUrl ? null : initials} */}
+      {props.icon || props['icon-outlined']?
+        <Icon name={props.name} color={props['icon-color']} size={props['icon-size']} outlined={ props['icon-outlined']}  />
+      : typeof props.children==='string'&&props.children }
+        
+
     </div>
   );
 };
