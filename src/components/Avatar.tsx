@@ -21,7 +21,7 @@ const Avatar = (props) => {
       }
 
   return (
-    <div style={avatarStyle}>
+    <div style={avatarStyle} className={props.class}>
       {props.icon || props['icon-outlined']?
         <Icon name={props.name} color={props['icon-color']} size={props['icon-size']} outlined={ props['icon-outlined']}  />
       : typeof props.children==='string'&&props.children }

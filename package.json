@@ -1,6 +1,6 @@
 {
   "name": "vrpackage",
-  "version": "0.0.2",
+  "version": "0.0.28",
   "description": "vite-react-framework",
   "main": "src/index.ts",
   "files": [
