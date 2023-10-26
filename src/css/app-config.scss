@@ -478,6 +478,19 @@ $rounded-borders-variants:(
   2xl:32
 );
 
+$text-weights: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  bolder: 900
+) !default;
+
+
+
+
 // border sizes
 $border-sizes: 2, 4, 8;
 
