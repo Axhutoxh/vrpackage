@@ -108,6 +108,7 @@
         border-#{$side-value}-width: #{$size}px;
         border-#{$side-value}-style: solid;
       }
+      
     }
   }
 }
@@ -116,6 +117,30 @@
 @each $size, $value in config.$rounded-borders-variants {
   .rounded-borders-#{$size} {
     border-radius: #{$value}px !important;
+  }
+
+  @each $type,$sizes in config.$box-sides{
+    @if type-of($sizes) == list {
+      .p#{$type}-#{$size} {
+        @each $part in $sizes {
+          padding-#{$part}:#{$value}px ;
+        }
+      }
+      .m#{$type}-#{$size} {
+        @each $part in $sizes {
+          padding-#{$part}:#{$value}px ;
+        }
+      }
+    }
+    @else {
+      .p#{$type}-#{$size} {
+        padding-#{$sizes}: #{$value}px ;
+      }
+      .m#{$type}-#{$size} {
+        padding-#{$sizes}: #{$value}px ;
+      }
+    }
+
   }
 }
 
