@@ -119,7 +119,28 @@
   }
 }
 
+@each $name,$value in config.$text-weights{
+  .text-#{$name}{
+    font-weight: #{$value} !important;
+  }
+}
 
+
+.flex{
+  display: flex;
+}
+
+.no-wrap{
+  flex-wrap: nowrap;
+}
+
+.row{
+  flex-direction: row;
+}
+
+.column{
+  flex-direction: column;
+}
 
 
 
