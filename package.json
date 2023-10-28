@@ -1,6 +1,6 @@
 {
   "name": "vrpackage",
-  "version": "0.0.45",
+  "version": "0.0.48",
   "description": "vite-react-framework",
   "main": "src/index.ts",
   "files": [
@@ -16,13 +16,15 @@
     "material-icons": "^1.13.12",
     "styled-components": "^6.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
   },
   "peerDependencies": {
     "material-icons": "^1.13.12",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.28",
