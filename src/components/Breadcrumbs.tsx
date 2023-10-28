@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Icons from 'vrpackage/src/components/Icons'
 const Breadcrumbs = (props)=>{
     const breadcrumbStyle = {
@@ -23,7 +24,9 @@ const Breadcrumbs = (props)=>{
                 className={` ${i+1!==props.crumbs.length ?
                     props['active-color']&&'text-'+props['active-color']||'text-primary'
                     :props.class||'text-grey'} flex row items-center `}>
-                        <span className="pointer-cursor" onClick={()=>handlePathClick(i, item)}>{item}</span>
+                        <span className="pointer-cursor" onClick={()=>handlePathClick(i, item)}>
+                          {item}
+                        </span>
                
                     {i+1<props.crumbs.length&&<div className={`${props.class} flex items-center px-xs px-${props.paddinglr}`}>{props['icon-separator']&&<Icons name={props['icon-separator']} />||props?.separator||'/'}</div>}
                  </div> 
@@ -31,7 +34,9 @@ const Breadcrumbs = (props)=>{
                 props['active-color']&&'text-'+props['active-color']||'text-primary'
                 :props.class||'text-grey'} flex row items-center `}>
                 <div className='flex row items-center pointer-cursor' onClick={()=>handlePathClick(i, item.label)}><Icons name={item.icon} class="pr-xs" />
-                {item.label}</div>
+                
+                <span>{item.to ? <Link to={item.to} className={`${props.class||'text-grey'}`} target={item.to&&props.target} style={{textDecoration:'none'}} >{item.label}</Link>:item.label}</span>
+               </div>
                 {i+1<props.crumbs.length&&<div className={`${props.class} flex items-center px-xs px-${props.paddinglr}`}>{props['icon-separator']&&<Icons name={props['icon-separator']} />||props?.separator||'/'}</div>}
            </div> 
             )
