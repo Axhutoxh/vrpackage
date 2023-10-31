@@ -137,7 +137,7 @@
         padding-#{$sizes}: #{$value}px ;
       }
       .m#{$type}-#{$size} {
-        padding-#{$sizes}: #{$value}px ;
+        margin-#{$sizes}: #{$value}px ;
       }
     }
 
