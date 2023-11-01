@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import Icon from "./Icons";
+import Icon from "./Icon";
 
 
 const Avatar = (props) => {

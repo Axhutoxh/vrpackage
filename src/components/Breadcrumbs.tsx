@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icons from 'vrpackage/src/components/Icons'
+import Icon from 'vrpackage/src/components/Icon'
 const Breadcrumbs = (props)=>{
     const breadcrumbStyle = {
         ...props.style,
@@ -28,16 +28,16 @@ const Breadcrumbs = (props)=>{
                           {item}
                         </span>
                
-                    {i+1<props.crumbs.length&&<div className={`${props.class} flex items-center px-xs px-${props.paddinglr}`}>{props['icon-separator']&&<Icons name={props['icon-separator']} />||props?.separator||'/'}</div>}
+                    {i+1<props.crumbs.length&&<div className={`${props.class} flex items-center px-xs px-${props.paddinglr}`}>{props['icon-separator']&&<Icon name={props['icon-separator']} />||props?.separator||'/'}</div>}
                  </div> 
               :   <div key={i}    className={`${i+1!==props.crumbs.length ?
                 props['active-color']&&'text-'+props['active-color']||'text-primary'
                 :props.class||'text-grey'} flex row items-center `}>
-                <div className='flex row items-center pointer-cursor' onClick={()=>handlePathClick(i, item.label)}><Icons name={item.icon} class="pr-xs" />
+                <div className='flex row items-center pointer-cursor' onClick={()=>handlePathClick(i, item.label)}><Icon name={item.icon} class="pr-xs" />
                 
                 <span>{item.to ? <Link to={item.to} className={`${props.class||'text-grey'}`} target={item.to&&props.target} style={{textDecoration:'none'}} >{item.label}</Link>:item.label}</span>
                </div>
-                {i+1<props.crumbs.length&&<div className={`${props.class} flex items-center px-xs px-${props.paddinglr}`}>{props['icon-separator']&&<Icons name={props['icon-separator']} />||props?.separator||'/'}</div>}
+                {i+1<props.crumbs.length&&<div className={`${props.class} flex items-center px-xs px-${props.paddinglr}`}>{props['icon-separator']&&<Icon name={props['icon-separator']} />||props?.separator||'/'}</div>}
            </div> 
             )
           })}

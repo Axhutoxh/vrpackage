@@ -1,5 +1,5 @@
 export * from './components/Button'
 export * from './components/Avatar'
-export * from './components/Icons'
+export * from './components/Icon'
 export * from './components/Badge'
 export * from './components/Banner'
