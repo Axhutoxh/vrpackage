@@ -11,7 +11,7 @@ const Icon = (props)=>{
 
 
     return (
-        <div>
+        <>
             { 
                 props.outlined ?
                      (<span className={`${props.class} material-icons-outlined`} style={iconStyle} >{props.name}</span>) 
@@ -21,7 +21,7 @@ const Icon = (props)=>{
                      (    <span className={`${props.class} material-icons-two-tone`} style={iconStyle} >{props.name}</span> )
                 :    (    <span className={`${props.class} material-icons`} style={iconStyle}   >{props.name}</span>)
             }
-        </div>
+        </>
     )
 }
 
