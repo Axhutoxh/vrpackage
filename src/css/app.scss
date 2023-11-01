@@ -128,7 +128,7 @@
       }
       .m#{$type}-#{$size} {
         @each $part in $sizes {
-          padding-#{$part}:#{$value}px ;
+          margin-#{$part}:#{$value}px ;
         }
       }
     }
