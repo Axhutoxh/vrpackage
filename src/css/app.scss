@@ -191,3 +191,13 @@
 .pointer-cursor{
   cursor: pointer;
 }
+
+.btn-effect {
+  cursor: pointer;
+  transition: transform 0.02s ease-in-out; /* Adding transition effect on transform property */
+}
+
+.btn-effect:hover {
+  transform: scale(1.01); /* Scale the button on hover */
+  opacity: 0.85;
+}
