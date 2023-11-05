@@ -36,7 +36,7 @@ const Button = (props)=>{
     }
 
     return(
-        <button style={btnStyle} className={`${props.class} `}  >
+        <button style={btnStyle} className={`${props.class} btn-effect`}  >
             {props.icon&&<Icon name={props.icon} outlined class="pr-2xs"  />}
             {typeof props.children==='string'&&props.children}
             {props['icon-right']&&<Icon name={props['icon-right']} outlined class="pl-2xs"/>}
