@@ -1,3 +1,3 @@
 # vrpackage
 vite-react-package
-0.0.65
+0.0.68
